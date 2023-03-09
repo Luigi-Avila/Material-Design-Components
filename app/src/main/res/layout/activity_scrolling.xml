@@ -20,4 +20,13 @@
         style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
         />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add_task"
+        android:contentDescription="@string/add_task"
+        app:layout_anchor="@id/bottom_app_Bar"
+        />
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
