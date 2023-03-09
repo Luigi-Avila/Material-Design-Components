@@ -3,4 +3,6 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="text_margin">16dp</dimen>
     <dimen name="card_img_size">88dp</dimen>
+    <dimen name="common_margin_min">8dp</dimen>
+    <dimen name="common_padding_default">16dp</dimen>
 </resources>
