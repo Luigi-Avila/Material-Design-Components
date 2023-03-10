@@ -1,8 +1,6 @@
 <resources>
     <string name="app_name">Material-Design-Components</string>
     <string name="large_text">
-        "Material is the metaphor.\n\n"
-
         "A material metaphor is the unifying theory of a rationalized space and a system of motion."
         "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
         "technologically advanced and open to imagination and magic.\n"
@@ -93,4 +91,5 @@
     <string name="add_task">add task</string>
     <string name="button_buy">buy</string>
     <string name="btn_card_skip">skip</string>
+    <string name="black_friday">Black Friday!</string>
 </resources>
