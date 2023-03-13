@@ -159,6 +159,16 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
 
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/cbEnablePass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/card_enable_pass"
+                    android:layout_marginTop="@dimen/common_margin_default"
+                    app:layout_constraintStart_toStartOf="@id/tvTitleAlt"
+                    app:layout_constraintTop_toBottomOf="@id/tilPassword"
+                    />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </com.google.android.material.card.MaterialCardView>
