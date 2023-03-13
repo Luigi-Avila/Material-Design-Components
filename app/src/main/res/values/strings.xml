@@ -94,4 +94,5 @@
     <string name="black_friday">Black Friday!</string>
     <string name="card_input_url">Image URL</string>
     <string name="card_required">Required</string>
+    <string name="card_password">Password</string>
 </resources>

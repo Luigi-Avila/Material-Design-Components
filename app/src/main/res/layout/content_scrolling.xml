@@ -16,26 +16,24 @@
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/common_margin_min"
             android:layout_marginStart="@dimen/common_margin_min"
+            android:layout_marginTop="@dimen/common_margin_min"
             android:layout_marginEnd="@dimen/common_margin_min"
             android:clickable="true"
-            android:focusable="true"
-            >
+            android:focusable="true">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="@dimen/common_padding_default"
                 android:paddingStart="@dimen/common_padding_default"
-                android:paddingEnd="@dimen/common_padding_default"
-                >
+                android:paddingTop="@dimen/common_padding_default"
+                android:paddingEnd="@dimen/common_padding_default">
 
                 <ImageView
                     android:id="@+id/imgCardView"
-                    android:importantForAccessibility="no"
                     android:layout_width="@dimen/card_img_size"
                     android:layout_height="@dimen/card_img_size"
+                    android:importantForAccessibility="no"
                     android:src="@drawable/ic_launcher_background"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -46,45 +44,40 @@
                     android:layout_height="wrap_content"
                     android:text="@string/button_buy"
                     app:icon="@drawable/ic_shop"
-                    app:layout_constraintTop_toBottomOf="@id/imgCardView"
                     app:layout_constraintEnd_toEndOf="parent"
-                    />
+                    app:layout_constraintTop_toBottomOf="@id/imgCardView" />
 
                 <com.google.android.material.button.MaterialButton
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/btn_card_skip"
-                    app:layout_constraintTop_toTopOf="@id/btnBuy"
-                    app:layout_constraintEnd_toStartOf="@id/btnBuy"
                     android:layout_marginEnd="@dimen/common_margin_min"
-                    style="@style/Widget.MaterialComponents.Button.TextButton"
-                    />
+                    android:text="@string/btn_card_skip"
+                    app:layout_constraintEnd_toStartOf="@id/btnBuy"
+                    app:layout_constraintTop_toTopOf="@id/btnBuy" />
 
                 <TextView
                     android:id="@+id/tvTitle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/common_margin_min"
                     android:text="@string/black_friday"
                     android:textAppearance="?attr/textAppearanceHeadline5"
-                    app:layout_constraintStart_toEndOf="@id/imgCardView"
-                    android:layout_marginStart="@dimen/common_margin_min"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@id/imgCardView"
-                    />
+                    app:layout_constraintStart_toEndOf="@id/imgCardView"
+                    app:layout_constraintTop_toTopOf="@id/imgCardView" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:text="@string/large_text"
-                    app:layout_constraintStart_toStartOf="@id/tvTitle"
-                    app:layout_constraintEnd_toEndOf="@id/tvTitle"
-                    app:layout_constraintTop_toBottomOf="@id/tvTitle"
-                    app:layout_constraintBottom_toBottomOf="@id/imgCardView"
-                    android:maxLines="3"
                     android:ellipsize="end"
+                    android:maxLines="3"
+                    android:text="@string/large_text"
                     android:textAppearance="?attr/textAppearanceBody1"
-                    />
-
+                    app:layout_constraintBottom_toBottomOf="@id/imgCardView"
+                    app:layout_constraintEnd_toEndOf="@id/tvTitle"
+                    app:layout_constraintStart_toStartOf="@id/tvTitle"
+                    app:layout_constraintTop_toBottomOf="@id/tvTitle" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -94,10 +87,9 @@
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/common_margin_min"
             android:layout_marginStart="@dimen/common_margin_min"
-            android:layout_marginEnd="@dimen/common_margin_min"
-            >
+            android:layout_marginTop="@dimen/common_margin_min"
+            android:layout_marginEnd="@dimen/common_margin_min">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -117,34 +109,54 @@
                     android:id="@+id/tvTitleAlt"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/common_margin_default"
                     android:text="@string/black_friday"
                     android:textAppearance="?attr/textAppearanceHeadline5"
-                    android:layout_margin="@dimen/common_margin_default"
-                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/imgCover"
-                    />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imgCover" />
 
                 <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilUrl"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    app:layout_constraintTop_toBottomOf="@id/tvTitleAlt"
-                    android:hint="@string/card_input_url"
                     android:layout_marginTop="@dimen/common_margin_default"
-                    app:helperText="@string/card_required"
+                    android:hint="@string/card_input_url"
                     app:endIconMode="clear_text"
-                    app:layout_constraintStart_toStartOf="@id/tvTitleAlt"
+                    app:helperText="@string/card_required"
                     app:layout_constraintEnd_toEndOf="@id/tvTitleAlt"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                    >
+                    app:layout_constraintStart_toStartOf="@id/tvTitleAlt"
+                    app:layout_constraintTop_toBottomOf="@id/tvTitleAlt">
+
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etUrl"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="textUri"
-                        />
+                        android:inputType="textUri" />
                 </com.google.android.material.textfield.TextInputLayout>
 
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilPassword"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_margin_default"
+                    android:enabled="false"
+                    android:hint="@string/card_password"
+                    app:endIconMode="password_toggle"
+                    app:layout_constraintEnd_toEndOf="@id/tvTitleAlt"
+                    app:layout_constraintStart_toStartOf="@id/tvTitleAlt"
+                    app:layout_constraintTop_toBottomOf="@id/tilUrl"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword" />
+
+                </com.google.android.material.textfield.TextInputLayout>
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
