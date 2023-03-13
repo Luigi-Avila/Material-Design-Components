@@ -28,6 +28,13 @@ class ScrollingActivity : AppCompatActivity() {
             }
         }
 
+
+        binding.bottomAppBar.setNavigationOnClickListener {
+            Snackbar.make(binding.root, R.string.message_action_success, Snackbar.LENGTH_LONG)
+                .setAnchorView(binding.fab)
+                .show()
+        }
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

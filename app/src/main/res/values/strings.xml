@@ -99,4 +99,5 @@
     <string name="card_toggle_red">RED</string>
     <string name="card_toggle_blue">BLUE</string>
     <string name="card_toggle_green">GREEN</string>
+    <string name="message_action_success">Evento Exitoso</string>
 </resources>
