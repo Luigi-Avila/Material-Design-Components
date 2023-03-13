@@ -92,4 +92,6 @@
     <string name="button_buy">buy</string>
     <string name="btn_card_skip">skip</string>
     <string name="black_friday">Black Friday!</string>
+    <string name="card_input_url">Image URL</string>
+    <string name="card_required">Required</string>
 </resources>
