@@ -15,6 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         app:navigationIcon="@drawable/ic_menu"
+        app:fabAnimationMode="scale"
         app:menu="@menu/menu_scrolling"
         app:hideOnScroll="true"
         style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
