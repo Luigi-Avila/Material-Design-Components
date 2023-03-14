@@ -16,6 +16,7 @@
         >
 
         <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvAd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:visibility="visible"
@@ -51,6 +52,7 @@
                     app:layout_constraintTop_toBottomOf="@id/imgCardView" />
 
                 <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSkip"
                     style="@style/Widget.MaterialComponents.Button.TextButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

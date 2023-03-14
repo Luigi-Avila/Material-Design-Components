@@ -7,6 +7,7 @@ import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import com.example.material_design_components.databinding.ActivityScrollingBinding
 import com.google.android.material.bottomappbar.BottomAppBar
 
@@ -34,6 +35,8 @@ class ScrollingActivity : AppCompatActivity() {
                 .setAnchorView(binding.fab)
                 .show()
         }
+
+        binding.content.btnSkip.setOnClickListener { binding.content.cvAd.visibility = View.GONE  }
 
     }
 
