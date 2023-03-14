@@ -9,6 +9,8 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.example.material_design_components.databinding.ActivityScrollingBinding
 import com.google.android.material.bottomappbar.BottomAppBar
 
@@ -47,6 +49,12 @@ class ScrollingActivity : AppCompatActivity() {
                 .setAnchorView(binding.fab)
                 .show()
         }
+
+        Glide.with(this)
+            .load("https://play-lh.googleusercontent.com/8ddL1kuoNUB5vUvgDVjYY3_6HwQcrg1K2fd_R8soD-e2QYj8fT9cfhfh3G0hnSruLKec")
+            .diskCacheStrategy(DiskCacheStrategy.ALL)
+            .centerCrop()
+            .into(binding.content.imgCover)
 
     }
 
