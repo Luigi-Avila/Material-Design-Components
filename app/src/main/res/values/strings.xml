@@ -100,4 +100,7 @@
     <string name="card_toggle_blue">BLUE</string>
     <string name="card_toggle_green">GREEN</string>
     <string name="message_action_success">Evento Exitoso</string>
+    <string name="card_buying">Comprado</string>
+    <string name="card_to_go">Ir</string>
+    <string name="card_historial">Historial</string>
 </resources>
