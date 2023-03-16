@@ -50,15 +50,26 @@ class ScrollingActivity : AppCompatActivity() {
                 .show()
         }
 
-        Glide.with(this)
-            .load("https://play-lh.googleusercontent.com/8ddL1kuoNUB5vUvgDVjYY3_6HwQcrg1K2fd_R8soD-e2QYj8fT9cfhfh3G0hnSruLKec")
-            .diskCacheStrategy(DiskCacheStrategy.ALL)
-            .centerCrop()
-            .into(binding.content.imgCover)
+        loadImage()
 
         binding.content.cbEnablePass.setOnClickListener {
             binding.content.tilPassword.isEnabled = !binding.content.tilPassword.isEnabled
         }
+
+        binding.content.etUrl.onFocusChangeListener = View.OnFocusChangeListener { view, hasFocus ->
+            val url = binding.content.etUrl.text.toString()
+            if (!hasFocus){
+                loadImage(url)
+            }
+        }
+    }
+
+    private fun loadImage(url: String = "https://play-lh.googleusercontent.com/8ddL1kuoNUB5vUvgDVjYY3_6HwQcrg1K2fd_R8soD-e2QYj8fT9cfhfh3G0hnSruLKec"){
+        Glide.with(this)
+            .load(url)
+            .diskCacheStrategy(DiskCacheStrategy.ALL)
+            .centerCrop()
+            .into(binding.content.imgCover)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
