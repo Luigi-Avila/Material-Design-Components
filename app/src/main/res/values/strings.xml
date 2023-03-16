@@ -103,4 +103,5 @@
     <string name="card_buying">Comprado</string>
     <string name="card_to_go">Ir</string>
     <string name="card_historial">Historial</string>
+    <string name="card_invalid_url">Invalid URL</string>
 </resources>
