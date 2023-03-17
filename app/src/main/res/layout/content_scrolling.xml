@@ -92,6 +92,80 @@
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:id="@+id/imgMyCard"
+                    android:layout_width="0dp"
+                    android:layout_height="160dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:background="@android:color/black"
+                    />
+                <TextView
+                    android:id="@+id/tvMyHeadline"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    style="?attr/textAppearanceHeadline5"
+                    android:text="Headline"
+                    app:layout_constraintTop_toBottomOf="@id/imgMyCard"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_margin="16dp"
+                    />
+                <TextView
+                    android:id="@+id/tvMySubhead"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Subhead"
+                    app:layout_constraintEnd_toEndOf="@id/tvMyHeadline"
+                    app:layout_constraintStart_toStartOf="@id/tvMyHeadline"
+                    app:layout_constraintTop_toBottomOf="@id/tvMyHeadline"
+                    style="?attr/textAppearanceSubtitle1"
+                    android:layout_marginTop="8dp"
+                    />
+                <TextView
+                    android:id="@+id/tvMyLargeText"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:text="@string/large_text"
+                    android:maxLines="3"
+                    android:ellipsize="end"
+                    app:layout_constraintTop_toBottomOf="@id/tvMySubhead"
+                    app:layout_constraintEnd_toEndOf="@id/tvMyHeadline"
+                    app:layout_constraintStart_toStartOf="@id/tvMyHeadline"
+                    />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toStartOf="@id/btnMyMainAction"
+                    app:layout_constraintTop_toTopOf="@id/btnMyMainAction"
+                    android:layout_marginEnd="16dp"
+                    android:text="Action"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    app:layout_constraintBottom_toBottomOf="@id/btnMyMainAction"
+                    />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnMyMainAction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Action"
+                    app:layout_constraintTop_toBottomOf="@id/tvMyLargeText"
+                    app:layout_constraintEnd_toEndOf="@id/tvMyHeadline"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/common_margin_min"
             android:layout_marginTop="@dimen/common_margin_min"
             android:layout_marginEnd="@dimen/common_margin_min">
