@@ -104,4 +104,8 @@
     <string name="card_to_go">Ir</string>
     <string name="card_historial">Historial</string>
     <string name="card_invalid_url">Invalid URL</string>
+    <string name="headline">Headline</string>
+    <string name="subhead">Subhead</string>
+    <string name="action">Action</string>
+    <string name="btn_action">Action</string>
 </resources>

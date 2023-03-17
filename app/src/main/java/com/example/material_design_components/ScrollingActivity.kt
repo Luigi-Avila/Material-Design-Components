@@ -2,8 +2,6 @@ package com.example.material_design_components
 
 import android.graphics.Color
 import android.os.Bundle
-import com.google.android.material.appbar.CollapsingToolbarLayout
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
@@ -58,7 +56,7 @@ class ScrollingActivity : AppCompatActivity() {
             binding.content.tilPassword.isEnabled = !binding.content.tilPassword.isEnabled
         }
 
-        binding.content.etUrl.onFocusChangeListener = View.OnFocusChangeListener { view, hasFocus ->
+        binding.content.etUrl.onFocusChangeListener = View.OnFocusChangeListener { _, hasFocus ->
             var errorStr: String? = null
             val url = binding.content.etUrl.text.toString()
             if (!hasFocus){
@@ -73,7 +71,7 @@ class ScrollingActivity : AppCompatActivity() {
             binding.content.tilUrl.error = errorStr
         }
 
-        binding.content.toggleButton.addOnButtonCheckedListener { group, checkedId, isChecked ->
+        binding.content.toggleButton.addOnButtonCheckedListener { _, checkedId, _ ->
             binding.root.setBackgroundColor(
                 when(checkedId) {
                     R.id.btnBlue -> Color.BLUE
