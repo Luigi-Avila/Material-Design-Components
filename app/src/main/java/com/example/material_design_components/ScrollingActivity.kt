@@ -1,5 +1,6 @@
 package com.example.material_design_components
 
+import android.graphics.Color
 import android.os.Bundle
 import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -70,6 +71,16 @@ class ScrollingActivity : AppCompatActivity() {
                 }
             }
             binding.content.tilUrl.error = errorStr
+        }
+
+        binding.content.toggleButton.addOnButtonCheckedListener { group, checkedId, isChecked ->
+            binding.root.setBackgroundColor(
+                when(checkedId) {
+                    R.id.btnBlue -> Color.BLUE
+                    R.id.btnRed -> Color.RED
+                    else -> Color.GREEN
+                }
+            )
         }
     }
 
