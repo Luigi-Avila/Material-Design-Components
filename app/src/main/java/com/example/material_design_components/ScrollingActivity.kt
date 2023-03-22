@@ -80,6 +80,16 @@ class ScrollingActivity : AppCompatActivity() {
                 }
             )
         }
+
+        binding.content.swFab.setOnCheckedChangeListener { button, isChecked ->
+            if (isChecked){
+                button.text = getString(R.string.card_hide_fab)
+                binding.fab.show()
+            } else {
+                button.text = getString(R.string.card_show_fab)
+                binding.fab.hide()
+            }
+        }
     }
 
     private fun loadImage(url: String = "https://play-lh.googleusercontent.com/8ddL1kuoNUB5vUvgDVjYY3_6HwQcrg1K2fd_R8soD-e2QYj8fT9cfhfh3G0hnSruLKec"){

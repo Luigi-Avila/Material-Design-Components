@@ -108,4 +108,6 @@
     <string name="subhead">Subhead</string>
     <string name="action">Action</string>
     <string name="btn_action">Action</string>
+    <string name="card_show_fab">show fab</string>
+    <string name="card_hide_fab">hide fab</string>
 </resources>

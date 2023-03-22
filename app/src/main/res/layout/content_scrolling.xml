@@ -250,6 +250,16 @@
                     app:layout_constraintTop_toBottomOf="@id/tilPassword"
                     />
 
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/swFab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:checked="true"
+                    app:layout_constraintTop_toTopOf="@id/cbEnablePass"
+                    app:layout_constraintEnd_toEndOf="@id/tilPassword"
+                    app:layout_constraintBottom_toBottomOf="@id/cbEnablePass"
+                    android:text="@string/card_hide_fab"/>
+
                 <View
                     android:id="@+id/divider"
                     android:layout_width="0dp"
