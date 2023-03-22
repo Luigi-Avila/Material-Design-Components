@@ -260,6 +260,19 @@
                     app:layout_constraintBottom_toBottomOf="@id/cbEnablePass"
                     android:text="@string/card_hide_fab"/>
 
+                <com.google.android.material.slider.Slider
+                    android:id="@+id/sldVol"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/cbEnablePass"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:valueFrom="0.0"
+                    android:valueTo="10"
+                    android:stepSize="1"
+                    android:value="6.0"
+                    />
+
                 <View
                     android:id="@+id/divider"
                     android:layout_width="0dp"
@@ -268,7 +281,7 @@
                     android:background="@color/color_divider"
                     app:layout_constraintStart_toStartOf="@id/tvTitleAlt"
                     app:layout_constraintEnd_toEndOf="@id/tvTitleAlt"
-                    app:layout_constraintTop_toBottomOf="@id/cbEnablePass"
+                    app:layout_constraintTop_toBottomOf="@id/sldVol"
                     />
 
                 <TextView
