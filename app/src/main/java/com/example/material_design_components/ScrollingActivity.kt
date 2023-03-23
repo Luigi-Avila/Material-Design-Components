@@ -94,6 +94,16 @@ class ScrollingActivity : AppCompatActivity() {
         binding.content.sldVol.addOnChangeListener { slider, value, fromUser ->
             binding.content.tvSubtitle.text = "Vol: $value"
         }
+
+        binding.content.cpEmail.setOnCheckedChangeListener { chip, isChecked ->
+            if (isChecked){
+                Toast.makeText(this, "${chip.text}", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        binding.content.cpEmail.setOnCloseIconClickListener {
+            binding.content.cpEmail.visibility = View.GONE
+        }
     }
 
     private fun loadImage(url: String = "https://play-lh.googleusercontent.com/8ddL1kuoNUB5vUvgDVjYY3_6HwQcrg1K2fd_R8soD-e2QYj8fT9cfhfh3G0hnSruLKec"){

@@ -273,6 +273,18 @@
                     android:value="6.0"
                     />
 
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/cpEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/tvTitleAlt"
+                    app:layout_constraintTop_toBottomOf="@id/sldVol"
+                    android:text="@string/my_email"
+                    android:checkable="true"
+                    app:closeIconEnabled="true"
+                    />
+
+
                 <View
                     android:id="@+id/divider"
                     android:layout_width="0dp"
@@ -281,7 +293,7 @@
                     android:background="@color/color_divider"
                     app:layout_constraintStart_toStartOf="@id/tvTitleAlt"
                     app:layout_constraintEnd_toEndOf="@id/tvTitleAlt"
-                    app:layout_constraintTop_toBottomOf="@id/sldVol"
+                    app:layout_constraintTop_toBottomOf="@id/cpEmail"
                     />
 
                 <TextView
